@@ -12,8 +12,8 @@ class Category extends StatelessWidget {
     return Padding(
       padding: const EdgeInsets.only(right: 17),
       child: Container(
-        height: 100,
-        width: 180,
+        height: 80,
+        width: 150,
         decoration: BoxDecoration(
             image: DecorationImage(
                 image: AssetImage(category.image), fit: BoxFit.fill),
@@ -22,7 +22,7 @@ class Category extends StatelessWidget {
         child: Center(
             child: Text(
           category.text,
-          style: TextStyle(
+          style: const TextStyle(
             color: Colors.white,
             fontSize: 16,
           ),

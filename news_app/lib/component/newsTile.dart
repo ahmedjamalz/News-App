@@ -1,30 +1,33 @@
 import 'package:flutter/material.dart';
+import 'package:news_app/models/article_model.dart';
 
 class NewsTileList extends StatelessWidget {
   const NewsTileList({
     super.key,
+    required this.articleModel,
   });
+  final ArticleModel articleModel;
 
   @override
   Widget build(BuildContext context) {
     return Column(
       children: [
-        Image(image: AssetImage('assets/general.avif')),
-        SizedBox(
+        Image.network(articleModel.image ?? ''),
+        const SizedBox(
           height: 12,
         ),
         Text(
+          articleModel.title,
           maxLines: 2,
           overflow: TextOverflow.ellipsis,
-          'Al Nassr Football Club, simply known as Al Nassr is a professional multi-sports club based in Riyadh, Saudi Arabia. Their football team competes in the Saudi Professional League. In Arabic, Al Nassr means the victory.,hj',
-          style: TextStyle(
-              color: Colors.black, fontSize: 23, fontWeight: FontWeight.bold),
+          style: const TextStyle(
+              color: Colors.black, fontSize: 20, fontWeight: FontWeight.bold),
         ),
         Text(
-          'Al Nassr Football Club, simply known as Al Nassr is a  In Arabic, Al Nassr means the victory.',
-          style: TextStyle(color: Colors.grey),
+          articleModel.description ?? '',
+          style: const TextStyle(color: Colors.grey),
         ),
-        SizedBox(
+        const SizedBox(
           height: 5,
         )
       ],

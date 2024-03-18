@@ -1,8 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:news_app/component/category.dart';
-import 'package:news_app/component/newsTile.dart';
-import 'package:news_app/widgets/category_list_view.dart';
-import 'package:news_app/widgets/newsTile_list_view.dart';
+import 'package:news_app/widgets/category_list.dart';
+import 'package:news_app/widgets/newsTile_view.dart';
 
 class HomePage extends StatelessWidget {
   const HomePage({super.key});
@@ -52,21 +50,3 @@ class HomePage extends StatelessWidget {
         ));
   }
 }
-// Padding(
-//             padding: const EdgeInsets.symmetric(horizontal: 12),
-//             child: Column(
-//               children: [
-//                 Expanded(child: CategoryListView()),
-//                 SizedBox(
-//                   height: 32,
-//                 ),
-//                 Expanded(flex: 6, child: NewsTileListView()),
-//               ],
-//             ),
-//           ),
-
-//                 ),
-//                 SliverToBoxAdapter(
-//                   child: NewsTileListView(),
-//                 ),
-//               ],

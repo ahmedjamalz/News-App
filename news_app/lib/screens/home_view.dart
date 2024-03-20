@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:news_app/widgets/category_list.dart';
-import 'package:news_app/widgets/newsTile_view.dart';
+import 'package:news_app/widgets/newsList_view_builder.dart';
 
 class HomePage extends StatelessWidget {
   const HomePage({super.key});
@@ -40,11 +40,13 @@ class HomePage extends StatelessWidget {
               SliverToBoxAdapter(
                   child: SizedBox(
                       height: 80, width: 200, child: CategoryListView())),
-              SliverToBoxAdapter(
+              const SliverToBoxAdapter(
                   child: SizedBox(
                 height: 32,
               )),
-              NewsTileListView(),
+              NewsListViewBuilder(
+                category: 'general',
+              ),
             ]),
           ),
         ));
